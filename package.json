@@ -9,6 +9,13 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "colors": "^1.4.0"
+    "bcrypt": "^5.0.1",
+    "body-parser": "^1.19.1",
+    "colors": "^1.4.0",
+    "express": "^4.17.2",
+    "express-session": "^1.17.2",
+    "mongoose": "^6.1.7",
+    "path": "^0.12.7",
+    "pug": "^3.0.2"
   }
 }
