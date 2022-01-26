@@ -9,7 +9,9 @@ const UserSchema = new Schema({
     username: {type: String, required: true, trim: true},
     email: {type: String, required: true, trim: true},
     password: {type: String, required: true, trim: true},
-    profilePic: {type: String, default:"/images/userpic.png"}
+    profilePic: {type: String, default:"/images/twittercloneEgg.jpg"},
+    posts: [{type: Schema.Types.ObjectId, ref: "Post"}],
+    likes: [{type: Schema.Types.ObjectId, ref: 'Post'}]
 }, {timestamps: true});
 
 module.exports = mongoose.model("User", UserSchema);

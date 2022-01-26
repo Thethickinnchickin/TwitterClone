@@ -45,10 +45,6 @@ router.get("/", (req, res) => {
                 })
 
             } else {
- 
-
-
-               
                 if(foundUser.email = email) {
                     payload.errorMessage = "Someone already has this email."
                 }

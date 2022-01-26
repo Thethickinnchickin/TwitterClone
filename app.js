@@ -42,14 +42,23 @@ router.get("/", (req, res) => {
     res.render("home");
 })
 
+//Api Routes
+const postApiRoute = require('./routes/api/posts');
+
 //Routes 
 const loginRoutes = require('./routes/loginRoutes');
 const registerRoutes = require('./routes/registerRoutes');
 const mainRoutes = require('./routes/mainRoutes');
+const logoutRoutes = require('./routes/logoutRoutes');
+
 
 app.use('/login', loginRoutes);
+app.use('/logout', logoutRoutes);
 app.use('/register', registerRoutes);
 app.use('', mainRoutes);
+app.use('/api/posts', postApiRoute);
+
+
 
 app.listen(3000, () => {
     console.log("Server running on port 3000");
